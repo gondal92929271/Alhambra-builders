@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+  <!-- Hero Section -->
+  <section class="hero-section blog-hero">
+    <div class="hero-content">
+      <h1 class="animate__animated animate__fadeIn">Our Blog</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Insights, Tips, and Updates from Alhamra Builders</p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="blog-content container mt-2">
+    <div class="intro-text">
+      <p>Welcome to the Alhamra Builders blog, where we share insights, tips, and updates about home construction, renovation, and the latest trends in the industry.</p>
+    </div>
+    
+    <!-- Blog Posts Grid -->
+    <div class="blog-grid">
+      <% blogs.forEach(function(blog) { %>
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="<%= blog.image %>" alt="<%= blog.title %>">
+        </div>
+        <div class="blog-details">
+          <span class="blog-date"><%= blog.date %></span>
+          <h2><%= blog.title %></h2>
+          <p><%= blog.excerpt %></p>
+          <a href="/blog/<%= blog.slug %>" class="read-more">Read More</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="pagination mt-2">
+      <% if (hasPrevPage) { %>
+        <a href="/blog?page=<%= currentPage - 1 %>" class="prev">&laquo; Previous</a>
+      <% } %>
+      
+      <% for (let i = 1; i <= totalPages; i++) { %>
+        <a href="/blog?page=<%= i %>" class="<%= i === currentPage ? 'active' : '' %>"><%= i %></a>
+      <% } %>
+      
+      <% if (hasNextPage) { %>
+        <a href="/blog?page=<%= currentPage + 1 %>" class="next">Next &raquo;</a>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section mt-2">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with our latest projects, industry insights, and special offers.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+<%- include('partials/footer') %>

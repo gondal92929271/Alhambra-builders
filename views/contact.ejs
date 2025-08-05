@@ -1,0 +1,114 @@
+<%- include('partials/header') %>
+
+  <!-- Hero Section -->
+  <section class="hero-section contact-hero">
+    <div class="hero-content">
+      <h1 class="animate__animated animate__fadeIn">Contact Us</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Get in Touch with Alhamra Builders</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content container mt-2">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <form action="/submit-contact" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <% if (typeof success !== 'undefined' && success) { %>
+          <div class="success-message">
+            <p>Thank you for your message. We'll be in touch shortly.</p>
+          </div>
+        <% } %>
+        <% if (typeof error !== 'undefined' && error) { %>
+          <div class="error-message">
+            <% if (error === 'missing_fields') { %>
+              <p>Please fill in all required fields.</p>
+            <% } else if (error === 'email_failed') { %>
+              <p>Sorry, there was an error sending your message. Please try again or call us directly.</p>
+            <% } else { %>
+              <p>An error occurred. Please try again later.</p>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="contact-info-container">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>07494 656352</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:info@alhamrabuilders.co.uk">info@alhamrabuilders.co.uk</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Address</h3>
+              <p>247 East Lancashire Road<br>Swinton, Manchester<br>M27 5QH</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="social-links">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Map Section -->
+    <div class="map-section mt-2">
+      <h2>Find Us</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.6763160809344!2d-2.3500792!3d53.5105249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae0f0e94f0f7%3A0x6a4b3f5d4d5f8a3a!2s247%20E%20Lancashire%20Rd%2C%20Swinton%2C%20Manchester%20M27%205QH!5e0!3m2!1sen!2suk!4v1622548691234!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer') %>

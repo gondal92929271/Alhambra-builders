@@ -1,0 +1,140 @@
+<%- include('partials/header') %>
+
+  <!-- Hero Section -->
+  <section class="hero-section blog-hero">
+    <div class="hero-content">
+      <h1 class="animate__animated animate__fadeIn"><%= post.title %></h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Published on <%= post.date %> by <%= post.author %></p>
+    </div>
+  </section>
+
+  <!-- Blog Detail Content -->
+  <section class="blog-detail-content container mt-2">
+    <div class="blog-detail-container">
+      <article class="blog-article">
+        <div class="blog-meta">
+          <span class="blog-date"><i class="fas fa-calendar"></i> <%= post.date %></span>
+          <span class="blog-author"><i class="fas fa-user"></i> <%= post.author %></span>
+          <span class="blog-category"><i class="fas fa-tag"></i> <%= post.category %></span>
+        </div>
+        
+        <div class="blog-featured-image">
+          <img src="<%= post.image %>" alt="<%= post.title %>" class="rounded-image">
+        </div>
+        
+        <div class="blog-content">
+          <%- post.content %>
+        </div>
+        
+        <div class="blog-footer">
+          <div class="blog-tags">
+            <h4>Tags:</h4>
+            <span class="tag">Home Extension</span>
+            <span class="tag">Planning</span>
+            <span class="tag">Construction</span>
+          </div>
+          
+          <div class="blog-share">
+            <h4>Share this post:</h4>
+            <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </article>
+      
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget">
+          <h3>Recent Posts</h3>
+          <div class="recent-posts">            <div class="recent-post">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" alt="ECO4 Grants">
+              <div class="recent-post-content">
+                <h4><a href="/blog/eco4-grants-eligibility-explained">ECO4 Grants Explained</a></h4>
+                <span class="recent-date">April 28, 2025</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" alt="Kitchen Trends">
+              <div class="recent-post-content">
+                <h4><a href="/blog/kitchen-renovation-trends-2025">Kitchen Renovation Trends</a></h4>
+                <span class="recent-date">April 10, 2025</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop" alt="Loft Conversions">
+              <div class="recent-post-content">
+                <h4><a href="/blog/loft-conversions-types-benefits">Loft Conversions Guide</a></h4>
+                <span class="recent-date">March 22, 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sidebar-widget">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            <li><a href="#">Extensions <span>(8)</span></a></li>
+            <li><a href="#">Energy Efficiency <span>(5)</span></a></li>
+            <li><a href="#">Renovations <span>(6)</span></a></li>
+            <li><a href="#">Planning <span>(4)</span></a></li>
+            <li><a href="#">Construction Tips <span>(7)</span></a></li>
+          </ul>
+        </div>
+        
+        <div class="sidebar-widget cta-widget">
+          <h3>Need Help with Your Project?</h3>
+          <p>Get a free consultation and quote for your home improvement project.</p>
+          <a href="/quote" class="btn">Get Free Quote</a>
+        </div>
+      </aside>
+    </div>
+    
+    <div class="blog-navigation">
+      <a href="/blog" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="related-posts mt-2">
+    <div class="container">
+      <h2 class="section-title">Related Posts</h2>
+      <div class="blog-grid">        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="Planning Permission">
+          </div>
+          <div class="blog-details">
+            <span class="blog-date">March 5, 2025</span>
+            <h3>Planning Permission Guide</h3>
+            <p>Navigate Manchester's planning process with confidence.</p>
+            <a href="/blog/manchester-planning-permission-guide" class="read-more">Read More</a>
+          </div>
+        </div>
+        
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop" alt="Sustainable Building">
+          </div>
+          <div class="blog-details">
+            <span class="blog-date">February 18, 2025</span>
+            <h3>Sustainable Building Practices</h3>
+            <p>Eco-friendly materials and energy-efficient designs.</p>
+            <a href="/blog/sustainable-building-practices" class="read-more">Read More</a>
+          </div>
+        </div>
+        
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&h=600&fit=crop" alt="Extension Planning">
+          </div>
+          <div class="blog-details">
+            <span class="blog-date">May 15, 2025</span>
+            <h3>Extension Planning Guide</h3>
+            <p>Everything you need to know about home extensions.</p>
+            <a href="/blog/planning-home-extension-guide" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer') %>

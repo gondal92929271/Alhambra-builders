@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="Alhamra Builders Ltd - Quality home construction, extensions, renovations, and loft conversions in Manchester and surrounding areas.">
+  <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="/images/favicon.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Modern additions for world-class styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo.jpg" alt="Alhamra Builders" class="logo-image">
+        </a>
+      </div>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/" class="<%= (title.includes('Home')) ? 'active' : '' %>">Home</a></li>
+          <li><a href="/about" class="<%= (title.includes('About')) ? 'active' : '' %>">About Us</a></li>
+          <li><a href="/services" class="<%= (title.includes('Services')) ? 'active' : '' %>">Services</a></li>
+          <li><a href="/projects" class="<%= (title.includes('Projects')) ? 'active' : '' %>">Projects</a></li>
+          <li><a href="/testimonials" class="<%= (title.includes('Testimonials')) ? 'active' : '' %>">Testimonials</a></li>
+          <li><a href="/eco4" class="<%= (title.includes('ECO4')) ? 'active' : '' %>">ECO4 Grant</a></li>
+          <li><a href="/blog" class="<%= (title.includes('Blog')) ? 'active' : '' %>">Blog</a></li>
+          <li><a href="/contact" class="<%= (title.includes('Contact')) ? 'active' : '' %>">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/testimonials">Testimonials</a></li>
+      <li><a href="/eco4">ECO4 Grant</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
