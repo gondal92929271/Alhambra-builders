@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+alhambra-builders:
+build: .
+container_name: alhambra-builders
+restart: always
+ports:
+- "3000:3000"
+env_file:
+- .env
