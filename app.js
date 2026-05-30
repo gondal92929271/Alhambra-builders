@@ -943,3 +943,19 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+app.get('/api/test-email', async (req, res) => {
+  try {
+    const result = await sendConfirmationEmail(
+      process.env.ADMIN_EMAIL,
+      'Test User',
+      'quote'
+    );
+
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
